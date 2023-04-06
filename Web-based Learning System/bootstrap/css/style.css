@@ -1,0 +1,154 @@
+
+.enrol-on-image-container-login{
+	background: url('../../images/undraw-login.png') center no-repeat;
+	background-size: cover;
+	height: 100vh;
+}
+.enrol-on-image-container-register {
+    background: url('../../imgs/register.svg') center no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.admin-img-container {
+    background: url('../../images/admin-image.png') center no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+
+.enrol-on-form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.enrol-on-form{
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.enrol-on-form h4 {
+    font-weight: bold;
+}
+
+.enrol-on-form .form-input {
+    position: relative;
+}
+
+
+
+.enrol-on-form .form-input input {
+    width: 100%;
+    margin-bottom: 20px;
+    height: 40px;
+    border: none;
+    border-bottom: 2px solid #777;
+    outline: none;
+    background: transparent;
+    padding-left: 40px;
+    font-weight: bold;
+    color: #777;
+}
+
+
+
+
+.enrol-on-form .form-input span {
+    position: absolute;
+    top: 8px;
+    padding-left: 10px;
+    color: #777;
+}
+    
+
+.enrol-on-form .form-input input:focus,
+.enrol-on-form .form-input input:valid {
+    border-bottom: 2px solid #4285f4;   
+}
+
+.enrol-on-form .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+  background-color: #4285f4 !important;
+  border:0px;
+}
+
+.enrol-on-form button[type="submit"] {
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+    background: linear-gradient(45deg, #4285f4, #709de8);   /*Button Color*/
+    color: #fff;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.enrol-on-form button[type="submit"]:hover {
+    background: linear-gradient(45deg, #709de8, #4285f4);   /*Button color when hover*/
+}
+
+.forget-link , .login-link , .register-link {
+    color: #709de8;
+    font-weight: bold;
+}
+
+.forget-link{
+    color:#333;
+}
+
+.forget-link:hover{
+    color:#888;
+    text-decoration:none;
+
+}
+
+.login-link:hover, .register-link:hover {
+        color: #4285f4;
+        text-decoration: none;
+}
+
+.enrol-on-form .btn-social {
+    color: white;
+    border: 0;
+    display: inline-block;
+    margin: 0px;
+    margin-right: 10px;
+    font-weight: bold;
+    padding: 0px 5px;
+    margin-bottom: 10px;
+}
+
+.enrol-on-form .btn-facebook {
+    color: #4866a8;
+}
+
+.enrol-on-form .btn-google {
+    color: #da3f34;
+}
+
+.enrol-on-form .btn-twitter {
+    color: #33ccff;
+}
+
+.enrol-on-form .btn-facebook:hover {
+    color: white;
+    background: hsla(221, 40%, 40%, 1);
+}
+
+.enrol-on-form .btn-google:hover {
+    color: white;
+    background: hsla(4, 59%, 47%, 1);
+}
+
+.enrol-on-form .btn-twitter:hover {
+    color: white;
+    background: hsla(195, 78%, 54%, 1);
+}
+
+h1,h2,h3,h4,h5,h6{
+    font-family:"Ubuntu",sans-serif;
+    font-weight:700;
+}

@@ -1,0 +1,202 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Web_based_Learning_System.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <%--bootstrap css--%>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <%--datatables css--%>
+    <link href="datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
+
+    <%--fontawesome css--%>
+    <link href="fontawesome/css/all.css" rel="stylesheet" />
+
+    <%--our custom css--%>
+        <link href="bootstrap/css/customStyleSheet.css" rel="stylesheet" />
+
+
+    <%--bootstrap js--%>
+    <script src="bootstrap/js/jquery-3.3.1.slim.min.js"></script>
+    <script src="bootstrap/js/popper.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <%--Data tbles js--%>
+    <script src="datatables/js/jquery.dataTables.min.js"></script>
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
+   
+
+</head>
+<body style="font-family:'Roboto',sans-serif";>
+    <form id="form1" runat="server">
+
+        <div>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="home.aspx">
+                    <img src="images/main-logo.svg" width="80" height="65" /><span style="font-weight: 700; color: dodgerblue"> LearnZone</span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <ul class="navbar-nav h5 ml-md-auto m-2">
+                        <li class="nav-item mr-5 ">
+                            <a class="nav-link" href="Home.aspx">Home</a>
+                        </li>
+                        <li class="nav-item  mr-5">
+                            <a class="nav-link" href="ViewCourses.aspx">Courses</a>
+                        </li>
+                        <li class="nav-item  mr-5">
+                            <a class="nav-link" href="About.aspx">About Us</a>
+                        </li>
+                        <li class="nav-item  mr-5">
+                            <a class="nav-link" href="Contact.aspx">Contact</a>
+                        </li>
+                        <li class="nav-item  mr-5 pt-2 ">
+                            <asp:LinkButton ID="LinkButton1" runat="server" Visible="false" OnClick="LinkButton1_Click">Enroll Into Course</asp:LinkButton>
+                        </li>
+                        <li class="nav-item  mr-5 pt-2 ">
+                            <asp:LinkButton ID="LinkButton3" runat="server" Visible="false" OnClick="LinkButton3_Click" >My Courses</asp:LinkButton>
+                        </li>
+                    </ul>
+
+
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <asp:LinkButton class="btn btn-light rounded-pill active m-1  " ID="btnLogin" runat="server" OnClick="btnLogin_Click">Login</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="btn btn-primary rounded-pill active m-1" ID="btnRegister" runat="server" OnClick="btnRegister_Click" Width="89px">Register</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="AdminDashboardUp" runat="server" Visible="False" OnClick="Dashboard_Click">Dashboard</asp:LinkButton>
+                        </li> 
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="Hello" runat="server" Visible="False" OnClick="Hello_Click">Hello User</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+
+                            <asp:LinkButton class="btn btn-primary rounded-pill active m-1" ID="btnLogout" runat="server" OnClick="btnLogout_Click" OnClientClick="return confirm('Do you really want to LogOut?')" Visible="False" Width="80px">Logout</asp:LinkButton>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+
+        <!-- Main Content Placeholder -->
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <!-- Main Content Placeholder -->
+
+        <!-- Footer -->
+        <!--  <footer class="footer">
+            <div>
+                <li class="f-logo">ENROL-ON</li>
+                <li>ENROL-ON is Web-based Learing system that will end your search for courses online with the best tutorials
+                    offered
+                    by us.</li>
+                                     <!-- <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LoginAdmin" runat="server" Visible="true">Admin Login</asp:LinkButton>
+                        </li>
+
+            </div>
+            <div class="mt-4">
+                <h3>Contact</h3>
+                <li><img src="imgs/geo-alt.svg">Asia, Earth Planet</li>
+                <li><img src="imgs/telephone-fill.svg">Telephone: +0 123456788</li>
+                <li><img src="imgs/mail.svg">Email :info@enrol-on.com</li>
+
+        </footer>-->
+
+
+        <!-- ./Footer -->
+        <div class="container">
+
+        </div>
+        <div class="footer-main bg-dark">
+            <div class="container">
+
+                <div class="row text-light ">
+                    <div class=" d-flex col-md-12 mb-4 text-center ml-auto">
+                        <a href="home.aspx">
+                            <img class="footer-img" src="images/main-logo.svg" alt="enrol-on-logo" height="100" width="120">
+                         
+                        </a><h2 class="mt-4"><b>
+                        LearnZone</b> |  An Interactive E-Learning Platform</h2>
+                    </div>
+                </div>
+                <div class="row text-light">
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-5 pb-5">
+                        <h5 class="heading mb-5">Contact Us</h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-3">contat@learnzone.com</li>
+                            <li class="mb-3">New-Baneshowr, kathmandu</li> 
+                            <li>9803879874 </li>
+                        </ul>
+
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-12 mb-5 mb-lg-0">
+                        <h6 class="heading">ABOUT</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="About.aspx">Company</a></li>
+                            <li><a href="ViewCourses.aspx">Courses</a></li>
+                            <li><a href="contact.aspx">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-2 col-md-6 col-sm-12 mb-5 mb-lg-0">
+                        <h6 class="heading">Courses</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Machine Learning</a></li>
+                            <li><a href="#">Cloud Computing</a></li>
+                            <li><a href="#">Web Development</a></li>
+                            <li><a href="#">Software Architecture</a></li>
+                            <li><a href="#">Application Devlpoment</a></li>
+                            <li><a href="#">Terms & Condtions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-12 mb-5 mb-lg-0">
+                        <h6 class="heading">Admin Informaton</h6>
+                        <div class="d-flex justify-content-between">
+                            <ul class="list-unstyled">
+                                <li><asp:LinkButton class="nav-link" ID="AdminLogin" runat="server" Visible="True" OnClick="btnAdminLogin">Admin Login</asp:LinkButton></li>
+                                <li><asp:LinkButton class="nav-link" ID="AdminDashboard" runat="server" Visible="False" OnClick="btnDashboard_Click">Dashboard</asp:LinkButton></li>
+                                <li><asp:LinkButton class="nav-link" ID="CourseManagement" runat="server" Visible="False" OnClick="btnCourseManagement_Click">Course Management</asp:LinkButton></li>
+                                <li><asp:LinkButton class="nav-link" ID="UserManagement" runat="server" Visible="False" OnClick="btnUserManagement_Click">User Management</asp:LinkButton></li>
+                                <li><asp:LinkButton class="nav-link" ID="Instructor" runat="server" Visible="False" OnClick="btnInstructor_Click">Instructor</asp:LinkButton></li>
+                                <li><asp:LinkButton class="nav-link" ID="Payment" runat="server" Visible="False" OnClick="btnPayment_Click">Payment</asp:LinkButton></li>
+                            
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 py-3">
+                        <center>
+                        <div class="copyright text-light">Copyright © LearnZone | All Right Reserved </div></center>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+    </form>
+</body>
+</html>

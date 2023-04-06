@@ -1,0 +1,92 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+#customers-testimonials .item {
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 15px;
+    opacity: .2;
+    -webkit-transform: scale3d(0.8, 0.8, 1);
+    transform: scale3d(0.8, 0.8, 1);
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #FFF;
+    border-radius: 3px;
+}
+
+#customers-testimonials .owl-item.active.center .item {
+    opacity: 1;
+    -webkit-transform: scale3d(1.0, 1.0, 1);
+    transform: scale3d(1.0, 1.0, 1);
+    background-color: #FFF;
+}
+
+.owl-carousel .owl-item img {
+    transform-style: preserve-3d;
+    max-width: 90px;
+    margin: 0 auto 17px;
+}
+
+#customers-testimonials.owl-carousel .owl-dots .owl-dot.active span, #customers-testimonials.owl-carousel .owl-dots .owl-dot:hover span {
+    background: #17A2B8;
+    transform: translate3d(0px, -50%, 0px) scale(0.6);
+}
+
+#customers-testimonials.owl-carousel .owl-dots {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+    #customers-testimonials.owl-carousel .owl-dots .owl-dot {
+        display: inline-block;
+        outline: none;
+    }
+
+        #customers-testimonials.owl-carousel .owl-dots .owl-dot span {
+            background: rgba(82, 45, 168,0.4);
+            display: inline-block;
+            height: 20px;
+            margin: 0 2px 5px;
+            transform: translate3d(0px, -50%, 0px) scale(0.3);
+            transform-origin: 50% 50% 0;
+            transition: all 250ms ease-out 0s;
+            width: 20px;
+            border-radius: 100%;
+        }
+
+.commo img {
+    width: 30px !important;
+    height: auto;
+    float: left;
+}
+
+.author-img img {
+    width: 60px !important;
+    height: auto;
+    border-radius: 100%;
+    margin-bottom: 0 !important;
+}
+
+
+a {
+    -webkit-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    transition: .3s all ease;
+}
+
+    a, a:hover {
+        text-decoration: none !important;
+    }
+ li a {
+    color: #666873;
+}
+
+ li a:hover {
+        color: #fff;
+    }
+
+
